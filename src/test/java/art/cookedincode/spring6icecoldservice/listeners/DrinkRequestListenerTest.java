@@ -32,7 +32,7 @@ class DrinkRequestListenerTest {
     @Test
     void listenDrinkRequest() {
         drinkRequestListener.listenDrinkRequest(DrinkRequestEvent.builder()
-                        .beerOrderLine(createDto())
+                .beerOrderLine(createDto())
                 .build());
 
         await().atMost(5, TimeUnit.SECONDS).untilAsserted(() -> {
